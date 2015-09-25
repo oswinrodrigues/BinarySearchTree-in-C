@@ -159,7 +159,7 @@ bool bst_erase( bst_t *tree, S32 val ) {
 	// is only TRUE when ONLY ONE of the two children is NULL
 	else if (p_current->left == NULL || p_current->right == NULL){
 		// In the case that the root node is to be erased
-		if(p_current = tree->root){
+		if(p_current == tree->root){
 			// Update new root node of tree
 			if(p_current->left != NULL){
 				tree->root = p_current->left;
@@ -247,6 +247,4 @@ bool bst_erase( bst_t *tree, S32 val ) {
 		tree->size -= 1;
 		return __TRUE;
 	}
-
-	return __FALSE;
 }
